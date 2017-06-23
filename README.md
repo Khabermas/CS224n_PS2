@@ -79,7 +79,7 @@ It plan to explore configurations with a second hidden layer.
 **Effect of L2 Regularization**
 
 | lambda      | Best dev UAS  |  Test UAS   |
-| ___________ | _____________ | :_________: |
+| ----------- | :-----------: | :---------: |
 | 0           |    88.41      |    88.79    |
 |             |               |             |
 | 5e-10       |    88.57      |    88.86    |
@@ -95,7 +95,7 @@ It plan to explore configurations with a second hidden layer.
 **Effect of Number of Hidden Units**
 
 | h size              | Best dev UAS |  Test UAS   |
-| ___________________ | ____________ |:___________:|
+| ------------------- | :----------: |:-----------:|
 |  100 §              |   87.27      |    87.67    |
 |                     |              |             |
 |  200                |   88.41      |    88.79    |
