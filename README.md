@@ -32,6 +32,17 @@ Dropout (50%) as well as L2 regularization (embedding matrices, weight matrices,
 
 
 
+
+
+
+
+
+
+
+
+
+
+![Chen and Manning (2014) configuration](https://github.com/Khabermas/CS224n_PS2/images/CMc.jpg)
 Chen and Manning (2014) configuration
 
 
@@ -45,9 +56,9 @@ Including POS embedding features in training added 1.7%, while (arc) label embed
 
 The configuration is similar to that of Chen & Manning.  Differences include the following:
 
-There are 36 (50-dimensional) input features, rather than 48.  Word and POS embeddings are included, but the less-useful arc label features are omitted.  
+There are 36 (50-dimensional) input features, rather than 48.  Word and POS embeddings are included, but the less-useful arc label features are omitted.
 
-The activation function is ReLU.  
+The activation function is ReLU.
 
 The input word and (for training) POS feature vectors are concatenated – not treated as separate inputs.  Hence there is a single weight matrix in the hidden layer.
 
@@ -58,6 +69,12 @@ In the baseline configuration we use 200 hidden units (as did C&M).  There is no
 But in subsequent trials, L2-regularization (of the hidden layer and softmax layer weight matrices) is explored.
 
 
+
+
+
+
+
+![Our configuration](https://github.com/Khabermas/CS224n_PS2/images/lecture6_472.jpg)
 
 **Assignment 2 Parser Results and Experiments**
 
