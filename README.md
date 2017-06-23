@@ -42,7 +42,7 @@ Dropout (50%) as well as L2 regularization (embedding matrices, weight matrices,
 
 
 
-![Chen and Manning (2014) configuration](https://github.com/Khabermas/CS224n_PS2/images/CMc.jpg)
+![Chen and Manning (2014) configuration](https://github.com/Khabermas/CS224n_PS2/tree/master/images/CMc.jpg)
 Chen and Manning (2014) configuration
 
 
@@ -74,7 +74,9 @@ But in subsequent trials, L2-regularization (of the hidden layer and softmax lay
 
 
 
-![Our configuration](https://github.com/Khabermas/CS224n_PS2/images/lecture6_472.jpg)
+
+
+![Our configuration](https://github.com/Khabermas/CS224n_PS2/tree/master/images/lecture6_472.jpg)
 
 **Assignment 2 Parser Results and Experiments**
 
