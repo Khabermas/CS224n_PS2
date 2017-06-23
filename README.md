@@ -76,40 +76,41 @@ Configurations with more hidden units require longer to train – 60 to 90 minut
 It plan to explore configurations with a second hidden layer.
 
 
-<center> **Effect of L2 Regularization** </center>
+**Effect of L2 Regularization**
 
-| lambda      | Best dev UAS  |  Test UAS  |
-| ___________ |:_____________:|:__________:|
-| 0           |    88.41      |   88.79    |
-|             |               |            |
-| 5e-10       |    88.57      |   88.86    |
-|             |               |            |
-| 1e-9        |    88.41      | **88.89**  |
-|             |               |            |
-| 3e-9        |    88.27      |   88.80    |
-|             |               |            |
-| 1e-8        |    87.79      |   88.20    |
+| lambda      | Best dev UAS  |  Test UAS   |
+| ___________ | _____________ | :_________: |
+| 0           |    88.41      |    88.79    |
+|             |               |             |
+| 5e-10       |    88.57      |    88.86    |
+|             |               |             |
+| 1e-9        |    88.41      |  **88.89**  |
+|             |               |             |
+| 3e-9        |    88.27      |    88.80    |
+|             |               |             |
+| 1e-8        |    87.79      |    88.20    |
 
 
 
-<center> **Effect of Number of Hidden Units** </center>
+**Effect of Number of Hidden Units**
 
-| h size              | Best dev UAS |  Test UAS  |
-| ___________________ |:____________:|:__________:|
-|  100 §              |   87.27      |    87.67   |
-|                     |              |            |
-|  200                |   88.41      |    88.79   |
-|                     |              |            |
-|  400                |   88.93      |    89.39   |
-|                     |              |            |
-|  600 §              |   89.64      |    89.82   |
-|                     |              |            |
-|  800                |   89.32      |    89.83   |
-|                     |              |            |
-|  800 (l2reg = 1e-9) |   89.42      |  **89.97** |
-|                     |              |            |
-| 1000 (l2reg = 1e-9) |   89.41      |    89.61   |
+| h size              | Best dev UAS |  Test UAS   |
+| ___________________ | ____________ |:___________:|
+|  100 §              |   87.27      |    87.67    |
+|                     |              |             |
+|  200                |   88.41      |    88.79    |
+|                     |              |             |
+|  400                |   88.93      |    89.39    |
+|                     |              |             |
+|  600 §              |   89.64      |    89.82    |
+|                     |              |             |
+|  800                |   89.32      |    89.83    |
+|                     |              |             |
+|  800 (l2reg = 1e-9) |   89.42      |  **89.97**  |
+|                     |              |             |
+| 1000 (l2reg = 1e-9) |   89.41      |    89.61    |
 
+ 
  § required more than 10 training epochs to reach best dev set UAS.
 
 
