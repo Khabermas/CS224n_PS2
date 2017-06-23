@@ -42,6 +42,16 @@ Dropout (50%) as well as L2 regularization (embedding matrices, weight matrices,
 
 
 
+
+
+
+
+
+
+
+
+
+
 ![Chen and Manning (2014) configuration](https://github.com/Khabermas/CS224n_PS2/tree/master/images/CMc.jpg)
 Chen and Manning (2014) configuration
 
@@ -67,6 +77,15 @@ Initialization is done differently (we employ Xavier initialization); C&M used s
 In the baseline configuration we use 200 hidden units (as did C&M).  There is no explicit regularization term in the loss function.  The principal means to prevent over-fitting are dropout (50%) and using parameters that gave the lowest validation set error in for the final evaluation against the test set – a sort of early stopping.
 
 But in subsequent trials, L2-regularization (of the hidden layer and softmax layer weight matrices) is explored.
+
+
+
+
+
+
+
+
+
 
 
 
