@@ -20,7 +20,7 @@ class Config(object):
     n_classes = 3
     dropout = 0.5
     embed_size = 50
-    hidden_size = 200
+    hidden_size = 800
     batch_size = 2048
     n_epochs = 10
     lr = 0.001
@@ -118,7 +118,7 @@ class ParserModel(Model):
 
     def add_prediction_op(self):
         """Adds the 1-hidden-layer NN:
-            h = Relu(xW + b1)
+            h = xW + b1
             h_drop = Dropout(h, dropout_rate)
             pred = h_dropU + b2
 
@@ -148,7 +148,7 @@ class ParserModel(Model):
 	b1 = tf.Variable(tf.zeros((self.config.hidden_size,)))
 	U =initializer((self.config.hidden_size, self.config.n_classes))
 	b2 = tf.Variable(tf.zeros((self.config.n_classes,)))
-	h = tf.nn.relu(tf.matmul(x, W) + b1)
+	h = tf.nn.relu6(tf.matmul(x, W) + b1)
 	h_drop = tf.nn.dropout(h, self.dropout_placeholder)
 	pred = tf.matmul(h_drop, U) + b2
 	# l2 regularization 
@@ -236,7 +236,7 @@ class ParserModel(Model):
         self.build()
 
 
-def main(debug=True):
+def main(debug=False):
     print 80 * "="
     print "INITIALIZING"
     print 80 * "="

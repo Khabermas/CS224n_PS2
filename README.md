@@ -62,7 +62,7 @@ The authors found that use of pre-trained word embeddings improved UAS by ≈ 0.
 Including POS embedding features in training added 1.7%, while (arc) label embedding helped by only 0.3%.  “This may be because the POS tags of two tokens already capture most of the label information between them.”
 
 
-**The Assignment 2 Network Configuration**
+##### **The Assignment 2 Network Configuration**
 
 The configuration is similar to that of Chen & Manning.  Differences include the following:
 
@@ -151,6 +151,23 @@ It plan to explore configurations with a second hidden layer.
  
  § required more than 10 training epochs to reach best dev set UAS.
 
+
+
+**Activation Function**
+
+Note: For all below, l2reg = 1e-9
+
+| Activation Function |  h size  | Best dev UAS |  Test UAS   |
+| ------------------- | -------- | :----------: | :---------: |
+|  ReLu               |   200    |    88.41     |   88.89     |
+|                     |          |              |             |
+|  tanh               |   200    |    86.92     |   87.22     |
+|                     |          |              |             |
+|  elu                |   200    |    87.97     |   88.29     |
+|                     |          |              |             |
+|  relu6              |   200    |    88.59     | **89.09**   |
+|                     |          |              |             |
+|  relu6              |   800    |    89.42     |   89.91     |
 
 
 
