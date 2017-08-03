@@ -53,6 +53,7 @@ Dropout (50%) as well as L2 regularization (embedding matrices, weight matrices,
 
 
 ![Chen and Manning (2014) configuration](https://github.com/Khabermas/CS224n_PS2/blob/master/images/CMc.jpg)
+
        Chen and Manning (2014) configuration
 
 
