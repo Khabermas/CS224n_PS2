@@ -101,7 +101,7 @@ But in subsequent trials, L2-regularization (of the hidden layer and softmax lay
   
   
 
-**Assignment 2 Parser Results and Experiments**
+### **Assignment 2 Parser Results and Experiments**
 
 Training the baseline model takes about 30 minutes on an oldish computer ( i7-2670QM CPU@2.20GHz X 8 with 5.7 GB RAM).  The machine is incapable of meaningful GPU support.  However, as TensorFlow was installed from source, it can make use of some streaming SIMD extensions in the intel chips (SSE3, SSE4, AVX) that may boost performance.  It is gratifying to see all CPUs running near capacity, in contrast to the unparallelized python programs of Assignment 1.
 
@@ -151,14 +151,14 @@ Configurations with more hidden units require longer to train – 60 to 90 minut
 |                     |              |             |
 |  800 (l2reg = 2e-9) |   89.38      |    89.96    |
 |                     |              |             |
-|  800 #              |   89.23      |    89.74    |         |
+|  800 †              |   89.23      |    89.74    |         |
 |                     |              |             |
 | 1000 (l2reg = 1e-9) |   89.41      |    89.61    |
 
  
  § required more than 10 training epochs to reach best dev set UAS.
 
- # l2reg = 1e-9; penalty on bias terms as well as weight matraces.
+ † l2reg = 1e-9; penalty on bias terms as well as weight matraces.
 
  
 
@@ -210,7 +210,7 @@ Note: For all below, l2reg = 1e-9
 
 
 
-**Two or Three Hidden Layer Models**
+### **Two or Three Hidden Layer Models**
 
 To run with other program components, multilayer_q2_parser_model.py must be renamed q2_parser_model.py
 
@@ -253,6 +253,7 @@ _**Two hidden layers**_
 | _600_    |   _1.0_   | _no dropout_    |    _88.81_    |   _89.01_    |
 |          |           |                 |               |              |
 |  800     |    0.8    |  only final     |     88.84     |    88.96     |
+|          |           |                 |               |              |
 
 
 _**Three hidden layers**_
@@ -273,10 +274,11 @@ _**Three hidden layers**_
 |  400     |    0.5    |  only final     |     88.97     |    88.94     |
 |          |           |                 |               |              |
 |  400     |    0.8    |  only final     |     88.85     |    89.02     |
+|          |           |                 |               |              |
 
+  
 
-
-#### **References and Further Reading**
+### **References and Further Reading**
 
 **Transition-Based Parsing**
 Joakim Nivre
