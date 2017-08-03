@@ -1,11 +1,11 @@
 # ﻿Neural Transition-Based Dependency Parser
 
 
-### **Introduction**
+## **Introduction**
 
 The second part -- and primary coding exercise -- of PS2 involves construction of a Neural Transition-Based Dependency Parser (Neural TBDP).  (The first section can be viewed as preparation for that task). Dependency parsing is described, for example, in [Chapter 14](https://web.stanford.edu/~jurafsky/slp/14.pdf) of the draft 3rd edition of _Speech and Language Processing_, by Jurafsky and Martin.  Deterministic Transition-Based Dependency Parsing is discussed in lecture 6 and in several references below.
 
-### **Background**
+## **Background**
 
 During the first decade of this century, quite a lot of success was achieved with feature-based discriminative dependency parsers.  Transition-based parsers proved the most efficient.  But those parsers required expert-designed feature sets, which engender millions of sparse indicator features (with inefficiently-learned weights).
 
@@ -53,7 +53,6 @@ Dropout (50%) as well as L2 regularization (embedding matrices, weight matrices,
 
 
 ![Chen and Manning (2014) configuration](https://github.com/Khabermas/CS224n_PS2/blob/master/images/CMc.jpg)
-
        Chen and Manning (2014) configuration
 
 
@@ -64,7 +63,7 @@ Including POS embedding features in training added 1.7%, while (arc) label embed
   
 
 
-### **The Assignment 2 Network Configuration**
+## **The Assignment 2 Network Configuration**
 
 The configuration is similar to that of Chen & Manning.  Differences include the following:
 
@@ -101,7 +100,7 @@ But in subsequent trials, L2-regularization (of the hidden layer and softmax lay
   
   
 
-### **Assignment 2 Parser Results and Experiments**
+## **Assignment 2 Parser Results and Experiments**
 
 Training the baseline model takes about 30 minutes on an oldish computer ( i7-2670QM CPU@2.20GHz X 8 with 5.7 GB RAM).  The machine is incapable of meaningful GPU support.  However, as TensorFlow was installed from source, it can make use of some streaming SIMD extensions in the intel chips (SSE3, SSE4, AVX) that may boost performance.  It is gratifying to see all CPUs running near capacity, in contrast to the unparallelized python programs of Assignment 1.
 
@@ -278,7 +277,7 @@ _**Three hidden layers**_
 
   
 
-### **References and Further Reading**
+## **References and Further Reading**
 
 **Transition-Based Parsing**
 Joakim Nivre
